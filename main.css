@@ -25,6 +25,17 @@ nav {
   margin-right: 20px;
 }
 
+.tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #ebebeb;
+  margin-right: 20px;
+}
+.tag:hover {
+  color: #fb32b9;
+}
+
 .nav-item a i {
   margin-right: 5px;
 }
@@ -268,7 +279,7 @@ nav .breadcrumb {
   text-decoration: none;
 }
 
-.list {
+.movie {
   display: block;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -277,7 +288,7 @@ nav .breadcrumb {
   margin-top: 40px;
 }
 
-.list-header {
+.movie-header {
   display: block;
   float: left;
   width: 35%;
@@ -286,11 +297,11 @@ nav .breadcrumb {
   border-radius: 2px 0 0 2px;
 }
 
-.list-header img {
+.movie-header img {
   width: 100%;
 }
 
-.list-header .list-header-image:after {
+.movie-header .movie-header-image:after {
   display: block;
   content: "";
   background-color: rgba(0, 0, 0, 0.4);
@@ -312,46 +323,45 @@ nav .breadcrumb {
   -o-transition: all 0.8s;
 }
 
-.list-content {
+.movie-content {
   display: block;
-  margin-left: 35%;
   padding: 15px;
   position: relative;
   font-family: "Roboto", sans-serif;
 }
 
-.list-meta {
+.movie-meta {
   display: block;
   margin-bottom: 16px;
   font-size: 13px;
   line-height: 100%;
 }
 
-.list-meta .list-meta-item {
+.movie-meta .movie-meta-item {
   display: inline-block;
   margin-right: 18px;
   color: #9a9a9a;
 }
 
-.list:after {
+.movie:after {
   display: block;
   clear: both;
   content: "";
 }
 
-.list:hover {
+.movie:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media only screen and (max-width: 991px) {
-  .list-header {
+  .movie-header {
     display: block;
     width: 100%;
     padding: 0;
     border-radius: 0;
   }
 
-  .list-content {
+  .movie-content {
     display: block;
     width: 100%;
     margin-left: 0;
@@ -359,13 +369,126 @@ nav .breadcrumb {
     clear: both;
   }
 }
+/* <-----/overlay------> */
+.know-more {
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 5px;
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
 
-.text-black {
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.embed.hide {
+  display: none;
+}
+
+.embed.show {
+  display: inline-block;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 40px;
+}
+
+.arrow.left-arrow {
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.arrow.right-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+}
+
+.dots {
+  margin-top: 30px;
+}
+
+.dots .dot {
+  padding: 5px 15px;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.dots .dot.active {
+  border-color: orange;
+}
+/* <-----/overlay------> */
+.link_video {
   font-family: "Roboto", sans-serif;
   color: purple;
 }
 
-.text-black:hover {
+.link_video:hover {
   color: #c90087;
   text-decoration: none;
 }
@@ -475,6 +598,31 @@ nav .breadcrumb {
   margin-right: 20px;
   margin-top: 10px;
 }
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+}
+
+.search {
+  background-color: #7e39ec;
+  border: 2px solid;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+}
+
+.search:focus {
+  outline: 0;
+  background-color: var(--primary-color);
+}
+
+.search::placeholder {
+  color: #ffffff;
+}
 
 .btn-recommend {
   background: #c90087;
@@ -499,6 +647,9 @@ nav .breadcrumb {
   color: #fff;
 }
 
+.no-results {
+  color: white;
+}
 .btn-unlike:hover {
   background: #f4416f;
 }
@@ -556,6 +707,16 @@ nav .breadcrumb {
     display: inline-grid;
   }
 }
+.card {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 150px;
+  margin: 100px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
 
 .container .page-text {
   text-align: justify !important;
@@ -570,7 +731,75 @@ div#letstalk {
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(176, 195, 210, 0.3);
 }
+.tag.highlight {
+  background-color: rgb(255, 0, 0);
+  width: 100%;
+}
+.searchbox {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: #511783;
+  padding-right: 40px;
+  color: #fff;
+}
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
 
+.watchMovie {
+  background-color: #525252;
+  color: #08a0e9;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+}
 .form-group {
   margin-bottom: 20px !important;
 }
@@ -608,7 +837,31 @@ form select,
   cursor: pointer;
   opacity: 0.8;
 }
+.pagination {
+  display: flex;
+  margin: 10px 30px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
 
+.page {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.page.disabled {
+  cursor: not-allowed;
+  color: grey;
+}
+
+.current {
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 5px solid orange;
+  font-size: 20px;
+  font-weight: 600;
+}
 .footer-fb:hover {
   color: #3b5998 !important;
   border: none !important;
