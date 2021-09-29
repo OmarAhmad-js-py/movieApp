@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
-  <head>
+  <head set="Access-Control-Allow-Origin: https://www.2embed.ru/embed/tmdb/movie?id= 550988">
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -10,7 +10,7 @@
     <meta name="author" content="" />
     <link rel="icon" href="img/favicon.png" />
 
-    <title>Movies - Get Booked Online</title>
+    <title>Tickets</title>
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
@@ -68,20 +68,27 @@
             aria-expanded="false"
             ><i class="fas fa-crown"></i> Genre</a
           >
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Adventure</a>
-            <a class="dropdown-item" href="#">Horror</a>
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Animation</a>
-            <a class="dropdown-item" href="#">Comedy</a>
-            <a class="dropdown-item" href="#">Fantasy</a>
+          
+          <div id="tags"class="dropdown-menu">
+            <a class="tag" href="#">Adventure</a>
+            <a class="tag" href="#">Horror</a>
+            <a class="tag" href="#">Animation</a>
+            <a class="tag" href="#">Comedy</a>
+            <a class="tag" href="#">Fantasy</a>
           </div>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche"><i class="fas fa-download"></i>Download</a>
+      </li>
       </ul>
 
-      <a class="nav-button" href="movies.html"
-        ><i class="fas fa-newspaper"></i> Latest Movies</a
-      >
+      <header>
+        <form  id="form">
+            <input type="text" placeholder="Search" id="search" class="search">
+        </form>
+    </header>
+
+    
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -95,255 +102,74 @@
     <!-- movie cards -->
     <div class="container">
       <div class="alert alert-primary" role="alert">
-        <i class="fas fa-exclamation-circle"></i> The following movies are
-        currently in theaters.
+        <i class="fas fa-exclamation-circle"></i> Have fun! Dont be here for too long tho!
       </div>
-      <main id ="main">
-      <div class="row">
+      <main id ="main" class="row">
+   <div class="row">
         <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wCvTSaIQEweNdsU98usvt9re7fq.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black"
-                  >Avengers: Infinity War</a
-                >
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 8.8</a
-                >
-              </span>
-              <p>
-                As the Avengers and their allies have continued to protect the
-                world from threats too large for any one hero to handle, a new
-                danger has emerged from the cosmic shadows: Thanos.
-              </p>
-            </div>
+            <div class="movie md-2">
+                <div class="movie-header">
+                   <a class="movie-header-image">
+                     <img
+                         src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wCvTSaIQEweNdsU98usvt9re7fq.jpg"
+                          />
+                             </a>
+                     </div>
+                   <div class="movie-content">
+                  <h2>
+                    <a href="single-movie.html" id="link_video"class="link_video"
+                      >Avengers: Infinity War</a
+                    >
+                  </h2>
+                  <span class="movie-meta">
+                    <span class="movie-meta-item"
+                      ><i class="fas fa-clock"></i> 2018</span
+                    >
+                    <a href="#" class="movie-meta-item"
+                      ><i class="fas fa-star"></i> 8.8</a
+                    >
+                  </span>
+                  <p>
+                    As the Avengers and their allies have continued to protect the
+                    world from threats too large for any one hero to handle, a new
+                    danger has emerged from the cosmic shadows: Thanos.
+                  </p>
           </div>
         </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black">Deadpool 2</a>
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 8.3</a
-                >
-              </span>
-              <p>
-                Wisecracking mercenary Deadpool battles the evil and powerful
-                Cable and other bad guys to save a boy's life.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black">Black Panther</a>
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 7.6</a
-                >
-              </span>
-              <p>
-                King T'Challa returns home from America to the reclusive,
-                technologically advanced African nation of Wakanda to serve as
-                his country's new leader. However, T'Challa soon finds that he
-                is challenged for the throne by factions within his own country
-                as well as without.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2><a href="#" class="text-black">Fifty Shades Freed</a></h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 4.4</a
-                >
-              </span>
-              <p>
-                A young Silicon Valley tech-titan enlists a veteran surgeon with
-                a controversial past in starting a hospital with a cutting-edge,
-                new school approach to medicine.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black">Red Sparrow</a>
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="single-movie.html" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 6.7</a
-                >
-              </span>
-              <p>
-                Prima ballerina, Dominika Egorova faces a bleak and uncertain
-                future after she suffers an injury that ends her career. She
-                soon turns to Sparrow School, a secret intelligence service that
-                trains exceptional young people to use their minds and bodies as
-                weapons.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black">Rampage</a>
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 6.4</a
-                >
-              </span>
-              <p>
-                Primatologist Davis Okoye shares an unshakable bond with George,
-                the extraordinarily intelligent, silverback gorilla who has been
-                in his care since birth. But a rogue genetic experiment gone
-                awry mutates this gentle ape into a raging creature of enormous
-                size.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black"
-                  >Ready Player One</a
-                >
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 8.8</a
-                >
-              </span>
-              <p>
-                When the creator of a popular video game system dies, a virtual
-                contest is created to compete for his fortune.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-6">
-          <div class="list mb-2">
-            <div class="list-header">
-              <a href="single-movie.html" class="list-header-image">
-                <img
-                  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
-                />
-              </a>
-            </div>
-            <div class="list-content">
-              <h2>
-                <a href="single-movie.html" class="text-black">Game Night</a>
-              </h2>
-              <span class="list-meta">
-                <span class="list-meta-item"
-                  ><i class="fas fa-clock"></i> 2018</span
-                >
-                <a href="#" class="list-meta-item"
-                  ><i class="fas fa-star"></i> 6.2</a
-                >
-              </span>
-              <p>
-                Max and Annie's weekly game night gets kicked up a notch when
-                Max's brother Brooks arranges a murder mystery party -- complete
-                with fake thugs and federal agents. So when Brooks gets
-                kidnapped, it's all supposed to be part of the game.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+     </div>
     </div>
-  </main>
+
+          
+       </main>
+       <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content" id="overlay-content">
+    <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
+        
+        <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"></span>
     <!-- /movie cards -->
     <br />
+    
+     <!-- /Pagination-->
+     <div class="pagination">
+      <div class="page" id="prev">Previous Page</div>
+      <div class="current" id="current">1</div>
+      <div class="page" id="next">Next Page</div>
+
+  </div>
+     <!-- /Pagination-->
     <!-- Newsletter -->
 
     <!-- /Newsletter -->
@@ -415,7 +241,6 @@
       integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
       crossorigin="anonymous"
     ></script>
-      <script type="text/javascript" src="script.js">
-      </script>
+    <script src="script.js"></script>
   </body>
 </html>
